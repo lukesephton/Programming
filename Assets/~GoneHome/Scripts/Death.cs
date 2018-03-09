@@ -15,7 +15,7 @@ namespace GoneHome
             // If the player hits an object that
             // triggers it
             if (other.name == "DeathZone" ||
-                other.name == "Enemy")
+                other.name.Contains ("Enemy"))
             {
                 // Ya gunna die
                 onDeath.Invoke();

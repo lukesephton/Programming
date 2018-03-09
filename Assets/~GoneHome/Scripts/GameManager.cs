@@ -16,5 +16,26 @@ namespace GoneHome
             // Load the one next to it (using buildIndex)
             SceneManager.LoadScene(currentScene.buildIndex + 1);
         }
+        //Added new levels, GameManager,Player fix and Death
+
+        // Restart the damn level 
+        public void ResetLevel()
+        {
+            // Find all enemies within the game 
+            FollowEnemy[] enemies = FindObjectsOfType<FollowEnemy>();
+            // for (initialization; condition; iteration)
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                //statements
+                enemies[i].Reset();
+                // Loop through all of them
+            }
+            // Reset them!
+
+            // Find the player 
+            Player player = FindObjectOfType<Player>();
+            // Reset the player 
+            player.Reset();
+        }
     }
 }
