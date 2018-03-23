@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace GoneHome
 {
     public class PatrolEnemy : MonoBehaviour
@@ -35,17 +36,19 @@ namespace GoneHome
             transform.position = position;
 
             //Get distance from current waypoint to Enemy
-            float distance = Vector3.Distance(current.position,
-            
+            float distance = Vector3.Distance(current.position, position);
+
                 // Check if distance is within range (closeness)
-                if(distance <= closeness)
+            if (distance <= closeness)
             {
                 // Switch to next waypoint
                 currentIndex++;
             }
             if (currentIndex >= waypoints.Length)
+            {
                 // Reset back to zero 
                 currentIndex = 0;
+            }
         }
     }
 }
