@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyOnLifeTime : MonoBehaviour
+namespace GoneHome
 {
-    public float lifeTime = 5f;
-
-	// Use this for initialization
-	void Start ()
+    public class DestroyOnLifeTime : MonoBehaviour
     {
-        Destroy(gameObject, lifeTime);
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        public float lifeTime = 5f;
+
+        // Use this for initialization
+        void Start()
+        {
+            Destroy(gameObject, lifeTime);
+        }
+    }
 }
